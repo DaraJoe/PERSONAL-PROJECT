@@ -191,36 +191,19 @@ body {
   }
 
   
-  /* Services */
-  
-  /* .services {
-    display: flex;
-    flex-direction: column;
-     flex-wrap: wrap; 
-    justify-content: space-between;
-  } */
+ 
 
   .container{
     display: flex;
     flex-direction: row-reverse ;
   }
   
-  /* .service img {
-    width: 500px;
-    height: auto;
-  }
-  
-  .service h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  } */
   
   /* About */
   
   .about-section {
     display: flex;
     gap: 50px;
-    /* margin-top: 40px; */
     text-align: center;
     background-color: lightgrey;
     width: 100%;
@@ -292,7 +275,6 @@ body {
   width: 100%;
   height: 500px;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   flex-direction: column;
   margin: 0 20px;
@@ -300,7 +282,6 @@ body {
   background-color: #efefef;
   border-radius: 10px;
   cursor: pointer;
-  /* margin-bottom: 20px; */
   transition: background 0.5s, transform 0.5s;
   overflow-y: scroll;
 }
@@ -313,7 +294,6 @@ body {
 
 .card:hover{
   background-color: #b8d4de;
-  /* transform: translateY(-20px); */
 }
 
 .card .icon{
@@ -399,7 +379,7 @@ body {
     color: rgb(131, 127, 127);
     height: 100px;
     padding: 20px;
-    width: max-content;
+    width: 100%;
     border-radius: 20px;
     line-height: 1.2rem;
   }
@@ -420,85 +400,6 @@ body {
   nav .fas{
     display: none;
   }
-  @media only screen and (max-width: 900px) {
-    .about h2{
-      padding-top: 30px;
-    }
-    .about-section{
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      padding:0, 40px, 40px;
-
-    }
-  
-    .about-section img{
-      width: 50%;
-      height: 100px;
-      position: absolute;
-      bottom: 0px;
-      right: 0px;
-      object-fit: cover;
-      margin-bottom: 30px;
-    }
-    
-  
-      .about-section ul li p{
-        line-height: 1rem;
-      }
-
-      .team p{
-        width: 100%;
-      }
-
-      .services{
-        margin-top: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-
-      .valuescont{
-        position: relative;
-        height: 700px;
-      }
-  
-      .section{
-        height: 960px;
-      }
-  
-      .card{
-  
-        width: 85%;
-        height: 250px;
-        display: flex;
-        margin: auto;
-        /* flex-wrap: nowrap; */
-      }
-      .valuescont img{
-        flex: 0;
-      }
-      .values{
-        /* display: flex; */
-        flex: 0;
-        left: 20px;
-      }
-
-      .vimin{
-        position: absolute;
-        top: 0;
-        padding-left: 10px;
-      }
-
-      .hori{
-        position: absolute;
-        bottom: 0;
-        left: 50px;
-        width: 80%;
-      }
-  }
-  
   @media only screen and (max-width: 600px) {
     body{
       max-width: 100%;
@@ -541,6 +442,7 @@ body {
       padding-top: 50px;
       z-index: 3;
       transition: 0.5s;
+  
       align-items: flex-start;
     }
 
@@ -557,47 +459,55 @@ body {
     }
 
     /*------------------------ values---------------------------- */
+
     .valuescont{
       display: flex;
-      /* flex-direction: column; */
-      height: 550px;
-    
-      position: relative;
-      align-items: center;
+      flex-direction: column;
+      gap: 0px; 
+      background-color: whitesmoke;
       width: 100%;
-      flex-wrap: wrap;
+      height: 700px;
+      position: relative;
     }
+    .valuescont img{
+      flex: 0;
+      width: 80%;
+      margin-top: 30px;
+      object-fit: contain;
+      height: 500px;
+    }
+  
     .values{
-      display: flex;
-      /* width: 400px; */
-      margin-top:150px;
-      padding: 0, 15px;
+      flex: 0;
+      width: 100%;
       gap: 0;
+      display: flex;
+      padding: 0, 20px;
+      flex-direction: column;
     }
+
+    .vimin{
+      padding-left: 20;
+    }
+  
     .values p{
+      width: 100%;
       line-height:1rem;
       letter-spacing: 0;
       padding: 20px;
+      color: rgb(126, 123, 123);
     }
-
-  .values h3{
-    font-size: 20px;
-    margin-top: 0;
-    font-weight: bold;
-    margin-left: 20px;
-  }
-
-
-    .valuescont img{
-      margin-top: 20px;
-      border-radius: 15px;
-      width: 80%;
-      height: 20%;
-      margin: 20px, auto;
-      object-fit: cover;
-      position: absolute;
-      top: 15px;
+  
+  
+    .values h3{
+      display: flex;
+      font-size: 30px;
+      font-weight: 300;
+      margin-top: 0px; 
+      justify-self: flex-start;
+      margin-left: 20px;
     }
+    
 
     /* -------about-------- */
   .about-section{
@@ -605,18 +515,30 @@ body {
     flex-direction: column;
     position: relative;
     padding-left: 25px;
+    height: 600px;
   }
 
   .about-section img{
     width: 50%;
     height: 100px;
     position: absolute;
-    top: 40px;
+    top: 50px;
     right: 0px;
     object-fit: cover;
     margin-bottom: 30px;
   }
   
+  .about-section ul{
+    margin-top: 20px;
+  }
+
+  .about-section h2{
+    font-size: 35px;
+  }
+
+  .about-section h3{
+    margin-top: 80px;
+  }
 
     .about-section ul li p{
       line-height: 1rem;
@@ -644,14 +566,7 @@ body {
       height: 250px;
       display: flex;
       margin: auto;
-      /* flex-wrap: nowrap; */
     }
-
-    /* .last{
-      height: 200px;
-      margin: auto;
-      width: 70%;
-    } */
 
     /* Our team */
     .team{
@@ -686,7 +601,116 @@ body {
       flex-basis: 100%;
     }
   }
+
+ 
   
+  /* @media only screen and (max-width: 480px)  */
+  @media only screen and (min-device-width : 601px) and (max-device-width : 950px) {
+    .valuescont{
+        display: flex;
+        flex-direction: column;
+        gap: 0px; 
+        background-color: whitesmoke;
+        width: 100%;
+        height: 700px;
+        /* height: 0px; */
+        position: relative;
+      }
+      .valuescont img{
+        flex: 0;
+        /* width: 80%; */
+        margin-top: 30px;
+        object-fit: contain;
+        height: 300px;
+      }
+    
+      .values{
+        flex: 0;
+        width: 100%;
+        gap: 0;
+        display: flex;
+        padding: 0, 20px;
+        flex-direction: column;
+      }
+  
+      .vimin{
+        padding-left: 20;
+      }
+    
+      .values p{
+        width: 100%;
+        line-height:1rem;
+        letter-spacing: 1px;
+        padding: 20px;
+        color: rgb(126, 123, 123);
+      }
+    
+    
+      .values h3{
+        display: flex;
+        font-size: 30px;
+        font-weight: 300;
+        margin-top: 0px; 
+        justify-self: flex-start;
+        margin-left: 20px;
+      }
+
+      .about-section{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 25px;
+        height: 600px;
+      }
+    
+      .about-section img{
+        width: 50%;
+        height: 100px;
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        object-fit: cover;
+        margin-bottom: 30px;
+      }
+      
+      .about-section ul{
+        margin-top: 40px;
+      }
+    
+      .about-section h2{
+        font-size: 35px;
+      }
+    
+      .about-section h3{
+        margin-top: 80px;
+      }
+    
+        .about-section ul li p{
+          /* line-height: 1rem; */
+          /* font-size: 1rem;
+          line-height: 1px; */
+        }
+
+        .services{
+          margin-top: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          flex-wrap: wrap;
+        }
+    
+        .section{
+          height: 930px;
+        }
+    
+        .card{
+    
+          width: 85%;
+          height: 250px;
+          display: flex;
+          margin: auto;
+    }
+
   @media only screen and (max-width: 480px) {
     .logo img {
       width: 150px;
