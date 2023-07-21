@@ -103,6 +103,7 @@ body {
     z-index: 3;
     transition: 0.5s ;
     margin-top: 15px;
+    cursor: pointer;
   }
 
    .cta:hover{
@@ -410,7 +411,7 @@ body {
     border-radius: 20px;
     line-height: 1.2rem;
   }
-  button{
+  /* button{
     width: 70px;
     height: 30px;
     padding: auto;
@@ -425,7 +426,7 @@ body {
   button:hover{
     background-color: whitesmoke;
     color: #000;
-  }
+  } */
  
   
   /* Footer */
@@ -766,7 +767,7 @@ body {
     }
   }
 
-  @media only screen and (min-device-width : 951px) and (max-device-width : 1300px){
+  @media only screen and (min-device-width : 951px) and (max-device-width : 1950px){
     .valuescont{
       height: 700px;
     }
