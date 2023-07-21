@@ -177,7 +177,7 @@ body {
     gap: 50px;
     background-color: whitesmoke;
     width: 100%;
-    height: 500px;
+    height: 400px;
     /* padding: 50px 20px; */
   }
   .valuescont img{
@@ -769,10 +769,17 @@ body {
 
   @media only screen and (min-device-width : 951px) and (max-device-width : 1950px){
     .valuescont{
-      height: 700px;
+      height: 600px;
     }
     .about-section{
-      height: 700px;
+      height: 659px;
+    }
+
+    .about-section h2{
+      margin-top: 20px;
+    }
+    .section{
+      height: 730px;
     }
   }
 
