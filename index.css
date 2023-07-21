@@ -654,7 +654,7 @@ body {
     }
   }
 
-  @media (max-width: 768px){
+  @media (min-width: 768px){
     .valuescont{
       height: 650;
     }
