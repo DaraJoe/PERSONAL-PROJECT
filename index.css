@@ -30,17 +30,28 @@ body {
   /* Header */
   
   header {
-    background-image: url(images/great.jpeg);
+    background: url( images/great.jpeg);
     background-size: contain;
     background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: rgb(192, 189, 189); */
     color: #292828;
     flex-direction: column;
     text-align: center;
+    position: relative;
+  }
+
+  header::before{
+    content: "";
+    background-image: url(images/great.jpeg);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    opacity: 0.85;
   }
 
 
@@ -48,10 +59,10 @@ body {
     font-size: 85px;
     margin-top: 150px;
     font-weight: 500;
-    /* background-color: lightgray; */
     color: #000000;
     padding: 10px;
     border-radius: 10px;
+    z-index: 3;
   }
 
   .pink{
@@ -75,16 +86,29 @@ body {
     padding: 10px;
     border-radius: 10px;
     line-height: 1.5rem;
+    z-index: 3;
   }
 
-  header a.cta {
+  .cta {
     background-color: #fff;
     border: none;
     color: #333;
-    padding: 0.5rem 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 1rem;
+    width: max-content;
+    z-index: 3;
+    transition: 0.5s ;
+    margin-top: 15px;
+  }
+
+   .cta:hover{
+    color: white;
+    border: 0.5px solid rgb(168, 166, 166);
+    background-color: transparent;
   }
   
   nav {
@@ -101,6 +125,8 @@ body {
   
   nav ul {
     display: flex;
+    align-items: center;
+    align-self: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -276,6 +302,7 @@ body {
   height: 500px;
   display: flex;
   align-items: center;
+  text-align: left;
   flex-direction: column;
   margin: 0 20px;
   padding: 20px 20px;
@@ -383,8 +410,22 @@ body {
     border-radius: 20px;
     line-height: 1.2rem;
   }
+  button{
+    width: 70px;
+    height: 30px;
+    padding: auto;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #666;
+    transition: 0.5s ease-in-out;
+  }
 
- 
+  button:hover{
+    background-color: whitesmoke;
+    color: #000;
+  }
  
   
   /* Footer */
@@ -428,6 +469,7 @@ body {
       display: block;
       font-size: 25px;
       color: white;
+      z-index: 30;
     }
      
     nav ul{
@@ -440,7 +482,7 @@ body {
       width: 200px;
       height: 100vh;
       padding-top: 50px;
-      z-index: 3;
+      z-index: 100;
       transition: 0.5s;
   
       align-items: flex-start;
@@ -522,8 +564,8 @@ body {
     width: 50%;
     height: 100px;
     position: absolute;
-    top: 50px;
-    right: 0px;
+    top: 90px;
+    right: 25px;
     object-fit: cover;
     margin-bottom: 30px;
   }
@@ -533,15 +575,21 @@ body {
   }
 
   .about-section h2{
+    font-weight: 300;
+    margin-top: 25px;
     font-size: 35px;
   }
 
   .about-section h3{
-    margin-top: 80px;
+    font-weight: 200;
+    margin-top: 160px;
   }
 
     .about-section ul li p{
+      color: rgb(85, 84, 84);
+      font-size: 18px;
       line-height: 1rem;
+      letter-spacing: 0;
     }
 
 
@@ -606,13 +654,17 @@ body {
   
   /* @media only screen and (max-width: 480px)  */
   @media only screen and (min-device-width : 601px) and (max-device-width : 950px) {
+    nav{
+      align-items: center;
+      justify-content: center;
+    }
     .valuescont{
         display: flex;
         flex-direction: column;
         gap: 0px; 
         background-color: whitesmoke;
         width: 100%;
-        height: 700px;
+        height: 780px;
         /* height: 0px; */
         position: relative;
       }
@@ -629,8 +681,9 @@ body {
         width: 100%;
         gap: 0;
         display: flex;
-        padding: 0, 20px;
+        padding: 0px, 20px;
         flex-direction: column;
+        margin: 30px, 20;
       }
   
       .vimin{
@@ -639,12 +692,11 @@ body {
     
       .values p{
         width: 100%;
-        line-height:1rem;
+        line-height:1.5rem;
         letter-spacing: 1px;
         padding: 20px;
-        color: rgb(126, 123, 123);
+        color: rgb(110, 110, 110);
       }
-    
     
       .values h3{
         display: flex;
@@ -665,9 +717,9 @@ body {
     
       .about-section img{
         width: 50%;
-        height: 100px;
+        height: 150px;
         position: absolute;
-        top: 70px;
+        top: 40px;
         right: 0px;
         object-fit: cover;
         margin-bottom: 30px;
@@ -678,17 +730,19 @@ body {
       }
     
       .about-section h2{
+        margin-top: 30px;
         font-size: 35px;
+        font-weight: 600;
       }
     
       .about-section h3{
+        font-size: 30px;
+        font-weight: 500;
         margin-top: 80px;
       }
     
         .about-section ul li p{
-          /* line-height: 1rem; */
-          /* font-size: 1rem;
-          line-height: 1px; */
+          /* line-height: 1rem;  */
         }
 
         .services{
@@ -710,6 +764,16 @@ body {
           display: flex;
           margin: auto;
     }
+  }
+
+  @media only screen and (min-device-width : 951px) and (max-device-width : 1300px){
+    .valuescont{
+      height: 700px;
+    }
+    .about-section{
+      height: 700px;
+    }
+  }
 
   @media only screen and (max-width: 480px) {
     .logo img {
