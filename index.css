@@ -654,6 +654,16 @@ body {
     }
   }
 
+  @media (max-width: 768){
+    .valuescont{
+      height: 650;
+    }
+
+    .section{
+      height: 650px;
+    }
+  }
+
  
   
   /* @media only screen and (max-width: 480px)  */
